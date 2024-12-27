@@ -1,6 +1,7 @@
 # 🌐 Repositório de Estudos - DevOps
 
-<img src="https://via.placeholder.com/800x200?text=DevOps+Learning" alt="Banner do Repositório" style="width:100%;border-radius:10px;">
+<img src="https://github.com/user-attachments/assets/da3d2dd9-e103-4406-bdb6-baee648e11a2" alt="DevOps Learning Banner" style="width:100%;border-radius:10px;">
+
 
 Este repositório foi criado para registrar meu aprendizado sobre **DevOps** e **Nuvem (Google Cloud, Azure, AWS)** durante o curso do Iago Ferreira e outros documentos que estudo sobre DevOps. Ele inclui anotações, exemplos de códigos, links úteis, erros que aconteceram e meu aprendizado como um todo.
 
