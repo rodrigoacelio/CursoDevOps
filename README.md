@@ -1,13 +1,12 @@
-# Repositório de Estudos - Vagrant
+# Repositório de Estudos - DevOps
 
-Este repositório foi criado para registrar meu aprendizado sobre **Vagrant** e **Provisionamento** durante o curso do Iago Ferreira. Ele inclui anotações, exemplos de códigos e links úteis para consulta futura.
+Este repositório foi criado para registrar meu aprendizado sobre **DevOps** e **Nuvem (Google Cloud, Azure, AWS)** durante o curso do Iago Ferreira e outros documentos que estudo sobre DevOps. Ele inclui anotações, exemplos de códigos, links úteis, erros que aconteceram e meu aprendizado como um todo.
 
 ## Estrutura do Repositório
 
-- **Modulo1_Instalacao**: Aprendizado sobre instalação do Vagrant e primeiros passos.
-- **Modulo2_Provisionamento**: Criação de máquinas virtuais e provisionamento usando Shell Scripts.
-- **Modulo3_Redes**: Configuração de redes com Vagrant, incluindo Forwarded Ports e Public Networks.
-- Outros módulos serão adicionados conforme avanço no curso.
+- **Modulo1_Vagrant**: Aprendizado sobre Vagrant e primeiros passos.
+- **Modulo1.A_Projetos_Vagrant**: Projetos que eu criei de acordo com o curso e os desafios, incluindo comandos importantes.
+- **Outros Módulos**: Serão adicionados conforme avanço nos cursos.
 
 ## Links Úteis
 
@@ -23,15 +22,16 @@ Este repositório foi criado para registrar meu aprendizado sobre **Vagrant** e 
 
 ---
 
-### Módulo 1: Instalação do Vagrant
+### Módulo 1: Vagrant
 
-**Objetivo:** Instalar o Vagrant e configurar o ambiente inicial.
+**Objetivo:** Aprender os conceitos básicos e avançados de Vagrant, incluindo provisionamento e redes.
 
 #### Passos Realizados
 
 1. Instalação do Vagrant no Windows e Linux.
 2. Pesquisa e download de boxes.
 3. Configuração inicial de um `Vagrantfile`.
+4. Configuração de redes com Forwarded Ports e Public Networks.
 
 #### Comandos Importantes
 
@@ -56,4 +56,4 @@ vagrant ssh
 
 ---
 
-**Mais módulos serão documentados aqui à medida que avanço no curso.**
+**Mais módulos serão documentados aqui à medida que avanço nos estudos.**
