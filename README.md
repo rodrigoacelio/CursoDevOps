@@ -1,4 +1,4 @@
-# Curso DevOps - Rodrigo Alan
+# Curso DevOps
 
 Este repositório foi criado para registrar meu aprendizado no curso de **DevOps**, abordando desde fundamentos até ferramentas como Vagrant, Ansible, Docker, Kubernetes, e muito mais. Aqui serão organizados módulos conforme avanço no curso, incluindo documentação, exemplos práticos e anotações.
 
