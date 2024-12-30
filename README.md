@@ -1,65 +1,137 @@
-# Curso DevOps
+# Módulo Vagrant - Curso DevOps
 
-Este repositório foi criado para registrar meu aprendizado no curso de **DevOps**, abordando desde fundamentos até ferramentas como Vagrant, Ansible, Docker, Kubernetes, e muito mais. Aqui serão organizados módulos conforme avanço no curso, incluindo documentação, exemplos práticos e anotações.
+Este módulo é dedicado ao aprendizado e implementação de **Vagrant** para criação e provisionamento de máquinas virtuais. Inclui desde a configuração inicial até projetos completos utilizando ferramentas como **Ansible** e **Shell Script**.
 
-## Estrutura do Repositório
+---
 
-- **VAGRANT/**: Módulo de aprendizado e projetos utilizando Vagrant para criação e provisionamento de máquinas virtuais.
-- **Outros módulos**: Serão adicionados conforme avanço no curso.
+## Estrutura do Módulo
 
-## Tecnologias Usadas e Aprendendo
-
-### Ferramentas
-
-<div align="center"> 
-  <div style="display: inline_block"><br>
-    <img align="center" height="40" width="50" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python">
-    <img align="center" height="40" width="50" alt="docker-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" title="Docker">
-    <img align="center" height="40" width="50" alt="kubernetes-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" title="Kubernetes">
-    <img align="center" height="40" width="50" alt="linux-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" title="Linux">
-    <img align="center" height="40" width="50" alt="terraform-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" title="Terraform">
-    <img align="center" height="40" width="50" alt="ansible-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" title="Ansible">
-    <img align="center" height="40" width="50" alt="vagrant-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vagrant/vagrant-original.svg" title="Vagrant">
-    <img align="center" height="40" width="50" alt="shell-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" title="Shell">
-  </div>
-</div>
-
-### Linguagens Mais Usadas
-
-```shell
-# Exemplo de código em shell
-#!/bin/bash
-echo "Aprendendo DevOps!"
+```
+VAGRANT/
+├── Vagrantfile
+├── playbook.yml
+├── script.sh
+├── site/
+│   ├── index.html
+│   └── custom/
+├── README.md
 ```
 
-```yaml
-# Exemplo de código em YAML
 ---
-- name: Instalar pacotes
+
+## Conteúdo do Módulo
+
+### **1. Vagrantfile**
+Arquivo principal para configurar o ambiente Vagrant.
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "primeira_maquina"
+  end
+  config.vm.box = "hashicorp/bionic64"
+  config.vm.network "forwarded_port", guest: 80, host: 8090
+  config.vm.provision "shell", path: "script.sh"
+  config.vm.synced_folder "site/", "/var/www/html"
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "playbook.yml"
+  end
+end
+```
+
+---
+
+### **2. playbook.yml**
+Playbook do Ansible para provisionar e configurar serviços na máquina virtual.
+```yaml
+---
+- name: Configuração inicial do servidor
   hosts: all
+  become: true
+
   tasks:
-    - name: Atualizar pacotes
+    - name: Atualizar os pacotes do sistema
       apt:
         update_cache: yes
-```
 
-```python
-# Exemplo de código em Python
-print("Bem-vindo ao curso de DevOps!")
+    - name: Instalar pacotes necessários
+      apt:
+        name:
+          - apache2
+          - curl
+        state: present
+
+    - name: Criar um diretório customizado
+      file:
+        path: /var/www/html/custom
+        state: directory
+        mode: '0755'
+
+    - name: Copiar um arquivo HTML de exemplo
+      copy:
+        content: "<html><body><h1>Site configurado pelo Ansible!</h1></body></html>"
+        dest: /var/www/html/index.html
+        mode: '0644'
 ```
 
 ---
 
-## Redes Sociais
+### **3. script.sh**
+Script de provisionamento em Shell Script.
+```bash
+#!/bin/bash
+echo "Provisionando máquina..."
+sudo apt-get update
+sudo apt-get install -y nginx
+```
 
-<div align="center">
-  <a href="mailto:rodrigoac49icloud.com"><img src="https://img.shields.io/badge/-Gmail-%23bd0000?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Gmail"></a>
-  <a href="https://www.linkedin.com/in/rodrigoacelio/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%23000000?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="LinkedIn"></a>
-  <a href="https://github.com/rodrigoacelio" target="_blank"><img src="https://img.shields.io/badge/-GitHub-%23bd0000?style=for-the-badge&logo=github&logoColor=white" target="_blank" alt="GitHub"></a>
-</div>
+---
+
+### **4. site/index.html**
+Página inicial simples para ser exibida pelo servidor provisionado.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+</head>
+<body>
+    <h1>Bem-vindo ao meu site configurado com Vagrant e Ansible!</h1>
+</body>
+</html>
+```
+
+---
+
+## Como Usar
+
+1. Certifique-se de ter os seguintes pré-requisitos instalados:
+   - **Vagrant**
+   - **VirtualBox**
+   - **Ansible** (caso esteja usando o provisionamento com Ansible).
+
+2. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/CursoDevOps.git
+   cd VAGRANT
+   ```
+
+3. Suba a máquina virtual:
+   ```bash
+   vagrant up
+   ```
+
+4. Acesse o site configurado:
+   - No navegador, acesse: `http://localhost:8090`.
 
 ---
 
 ## Licença
 
-Este repositório está disponível sob a [Licença MIT](LICENSE).
+Este projeto está disponível sob a [Licença MIT](LICENSE).
+
+---
+
+Se tiver dúvidas ou sugestões, contribua ou entre em contato! 🚀
