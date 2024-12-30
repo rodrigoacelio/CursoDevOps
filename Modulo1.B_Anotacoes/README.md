@@ -1,4 +1,4 @@
-# Módulo 1.B - Anotações do Curso
+# Módulo 1.A - Anotações do Curso
 
 ## O que foi aprendido:
 - Criação e uso de pastas com `mkdir` e `cd`.
