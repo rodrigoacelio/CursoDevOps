@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Curso DevOps - Rodrigo Alan
-=======
-# 🌐 Repositório de Estudos - DevOps Vagrant
->>>>>>> 95e95ab31fd56d3869262469f2ab2b7ddb561a8e
 
 Este repositório foi criado para registrar meu aprendizado no curso de **DevOps**, abordando desde fundamentos até ferramentas como Vagrant, Ansible, Docker, Kubernetes, e muito mais. Aqui serão organizados módulos conforme avanço no curso, incluindo documentação, exemplos práticos e anotações.
 
