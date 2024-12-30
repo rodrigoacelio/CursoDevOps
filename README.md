@@ -1,73 +1,65 @@
-# 🌐 Repositório de Estudos - DevOps
+# Curso DevOps - Rodrigo Alan
 
-<img src="https://github.com/user-attachments/assets/da3d2dd9-e103-4406-bdb6-baee648e11a2" alt="DevOps Learning Banner" style="width:100%;border-radius:10px;">
+Este repositório foi criado para registrar meu aprendizado no curso de **DevOps**, abordando desde fundamentos até ferramentas como Vagrant, Ansible, Docker, Kubernetes, e muito mais. Aqui serão organizados módulos conforme avanço no curso, incluindo documentação, exemplos práticos e anotações.
 
+## Estrutura do Repositório
 
-Este repositório foi criado para registrar meu aprendizado sobre **DevOps** e **Nuvem (Google Cloud, Azure, AWS)** durante o curso do Iago Ferreira e outros documentos que estudo sobre DevOps. Ele inclui anotações, exemplos de códigos, links úteis, erros que aconteceram e meu aprendizado como um todo.
+- **VAGRANT/**: Módulo de aprendizado e projetos utilizando Vagrant para criação e provisionamento de máquinas virtuais.
+- **Outros módulos**: Serão adicionados conforme avanço no curso.
 
----
+## Tecnologias Usadas e Aprendendo
 
-## 🧑‍💻 Sobre Mim
-[🌟 Confira meu README principal para mais informações sobre minha trajetória!](#)
+### Ferramentas
 
----
+<div align="center"> 
+  <div style="display: inline_block"><br>
+    <img align="center" height="40" width="50" alt="python-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python">
+    <img align="center" height="40" width="50" alt="docker-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" title="Docker">
+    <img align="center" height="40" width="50" alt="kubernetes-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" title="Kubernetes">
+    <img align="center" height="40" width="50" alt="linux-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" title="Linux">
+    <img align="center" height="40" width="50" alt="terraform-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" title="Terraform">
+    <img align="center" height="40" width="50" alt="ansible-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg" title="Ansible">
+    <img align="center" height="40" width="50" alt="vagrant-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vagrant/vagrant-original.svg" title="Vagrant">
+    <img align="center" height="40" width="50" alt="shell-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" title="Shell">
+  </div>
+</div>
 
-## 📂 Estrutura do Repositório
+### Linguagens Mais Usadas
 
-- **📁 Modulo1_Vagrant**: Aprendizado sobre Vagrant e primeiros passos.
-- **📁 Modulo1.A_Projetos_Vagrant**: Projetos que eu criei de acordo com o curso e os desafios, incluindo comandos importantes.
-- **📁 Outros Módulos**: Serão adicionados conforme avanço nos cursos.
-
----
-
-## 🔗 Links Úteis
-
-- [📘 Documentação Oficial do Vagrant](https://www.vagrantup.com/docs)
-- [📄 Guia sobre Provisionamento com Shell](https://www.shellscript.sh/)
-- [🌐 Configuração de Redes com Vagrant](https://www.vagrantup.com/docs/networking)
-
----
-
-## 🛠️ Como Usar Este Repositório
-
-1. 📂 Navegue até o módulo desejado.
-2. 📝 Consulte o arquivo `README.md` dentro da pasta do módulo para entender os exemplos e instruções.
-3. 💻 Teste os códigos em seu ambiente local.
-
----
-
-### 🚀 Módulo 1: Vagrant
-
-**Objetivo:** Aprender os conceitos básicos e avançados de Vagrant, incluindo provisionamento e redes.
-
-#### ✅ Passos Realizados
-
-1. Instalação do Vagrant no Windows e Linux.
-2. Pesquisa e download de boxes.
-3. Configuração inicial de um `Vagrantfile`.
-4. Configuração de redes com Forwarded Ports e Public Networks.
-
-#### 💻 Comandos Importantes
-
-```bash
-# Instalar o Vagrant (Linux - Debian/Ubuntu)
-sudo apt-get install vagrant
-
-# Inicializar uma box
-vagrant init hashicorp/bionic64
-
-# Subir a máquina virtual
-vagrant up
-
-# Conectar via SSH
-vagrant ssh
+```shell
+# Exemplo de código em shell
+#!/bin/bash
+echo "Aprendendo DevOps!"
 ```
 
-#### 🔗 Links Relacionados
+```yaml
+# Exemplo de código em YAML
+---
+- name: Instalar pacotes
+  hosts: all
+  tasks:
+    - name: Atualizar pacotes
+      apt:
+        update_cache: yes
+```
 
-- [⬇️ Download do Vagrant](https://www.vagrantup.com/downloads)
-- [📦 Boxes no Vagrant Cloud](https://app.vagrantup.com/boxes/search)
+```python
+# Exemplo de código em Python
+print("Bem-vindo ao curso de DevOps!")
+```
 
 ---
 
-**📌 Mais módulos serão documentados aqui à medida que avanço nos estudos.**
+## Redes Sociais
+
+<div align="center">
+  <a href="mailto:rodrigoac49icloud.com"><img src="https://img.shields.io/badge/-Gmail-%23bd0000?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" alt="Gmail"></a>
+  <a href="https://www.linkedin.com/in/rodrigoacelio/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%23000000?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="LinkedIn"></a>
+  <a href="https://github.com/rodrigoacelio" target="_blank"><img src="https://img.shields.io/badge/-GitHub-%23bd0000?style=for-the-badge&logo=github&logoColor=white" target="_blank" alt="GitHub"></a>
+</div>
+
+---
+
+## Licença
+
+Este repositório está disponível sob a [Licença MIT](LICENSE).
