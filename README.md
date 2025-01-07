@@ -114,7 +114,7 @@ Página inicial simples para ser exibida pelo servidor provisionado.
 
 2. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/CursoDevOps.git
+   git clone https://github.com/rodrigoacelio/CursoDevOps.git
    cd VAGRANT
    ```
 
